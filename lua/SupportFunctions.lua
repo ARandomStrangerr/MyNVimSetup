@@ -30,7 +30,7 @@ function enterKeyStroke()
 	end
 end
 
-function backspaceKeyStroke() 
+function backspaceKeyStroke()
 	if isPrevChar("{") and isNextChar("}") or isPrevChar("[") and isNextChar("]") or isPrevChar("(") and isNextChar(")") or isPrevChar("'") and isNextChar("'") or isPrevChar('"') and isNextChar('"') then
 		return vim.api.nvim_replace_termcodes('<BS><Del>', true, false, true);
 	end
@@ -44,3 +44,6 @@ function deleteKeyStroke()
 	return vim.api.nvim_replace_termcodes('<Del>', true, false, true)
 end
 
+function newLine()
+	return vim.api.nvim_replace_termcodes('<End><CR>', true, false, true);
+end

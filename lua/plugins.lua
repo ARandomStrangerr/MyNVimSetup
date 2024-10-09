@@ -40,12 +40,13 @@ packer.init({
 
 -- Install your plugins here
 return packer.startup(function(use)
+	use ("wbthomason/packer.nvim") -- Have packer manage itself
 	use ({
-		"wbthomason/packer.nvim",
+		'lewis6991/gitsigns.nvim',
 		config = function()
-			require ("plugins");
-		end,
-	}) -- Have packer manage itself	
+			require("gitsigns").setup()
+		end
+	}) -- provide git sign so that status bar can show git status
 	use ({
 		"nvim-tree/nvim-tree.lua",
 		config = function()
@@ -55,8 +56,8 @@ return packer.startup(function(use)
 	use({
 		"freddiehaddad/feline.nvim",
 		config = function()
-			require("./plugins/felineConfig2")
-			require('feline').winbar.setup()
+			require("./plugins/felineConfig")
+			--require('feline').winbar.setup()
 		end,
 	}) -- install status bar
 	use ({
@@ -65,10 +66,10 @@ return packer.startup(function(use)
 			require ("nvim-web-devicons").setup();
 		end,
 	}) -- install icon packages
-	use ({ "catppuccin/nvim", as = "catppuccin" }) -- install color scheme
+	use ({ "catppuccin/nvim", as = "catppuccin-mocha" }) -- install color scheme
 	use ({'neoclide/coc.nvim', branch = 'release'}) -- install auto complete
 
 	if PACKER_BOOTSTRAP then
-		require("packer").sync()
+	require("packer").sync()
 	end
 end)
