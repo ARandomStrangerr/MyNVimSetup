@@ -54,10 +54,10 @@ return packer.startup(function(use)
 		end,
 	}) -- install nvim tree
 	use({
-		"freddiehaddad/feline.nvim",
+		"famiu/feline.nvim",
 		config = function()
 			require("./plugins/felineConfig")
-			--require('feline').winbar.setup()
+			--require("./plugins/winbarConfig")
 		end,
 	}) -- install status bar
 	use ({

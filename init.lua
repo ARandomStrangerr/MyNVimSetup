@@ -29,4 +29,4 @@ vim.api.nvim_set_keymap('i', '"', 'v:lua.isNextChar(\'\"\') ? "<Right>" : \'""<L
 vim.api.nvim_set_keymap('i', "'", "v:lua.isNextChar(\"\'\") ? '<Right>' : \"''<left>\"", {expr=true, noremap=true, silent=true}); -- auto complete open and close single quote
 vim.api.nvim_set_keymap('i', ')', "v:lua.isNextChar(')') ? '<Right>' : ')'", {expr=true, noremap=true, silent=true}); -- move out when close brace
 vim.api.nvim_set_keymap('i', ']', "v:lua.isNextChar(']') ? '<Right>' : ']'", {expr=true, noremap=true, silent=true}); -- move out when close square brace
-vim.api.nvim_set_keymap('i', '}', "v:lua.isNextChar('}') ? '<Right>' : '}'", {expr=true, noremap=true, silent=true}); -- move out when close curly brac
+vim.api.nvim_set_keymap('i', '}', "v:lua.isNextChar('}') ? '<Right>' : '}'", {expr=true, noremap=true, silent=true}); -- move out when close curly brace

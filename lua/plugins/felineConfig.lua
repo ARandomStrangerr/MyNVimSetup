@@ -8,17 +8,17 @@ local catppuccin_frappe = {
 	diagnosticWarningsFg = "#f9c74f",
 	diagnosticWarningsBg = "",
 	diagnosticErrorsFg = "#f94144",
-	vimModeBg = "#577590",
-	vimModeRightSepFg = "#577590",
-	vimModeRightSepBg = "#4d908e",
+	vimModeBg = "#43aa8b",
+	vimModeRightSepFg = "#43aa8b",
+	vimModeRightSepBg = "#90be6d",
 	fileInfoFg = "#363a4f",
-	fileInfoBg = "#4d908e",
-	fileInfoRightSepFg = "#4d908e",
-	fileInfoRightSepBg = "#43aa8b",
+	fileInfoBg = "#90be6d",
+	fileInfoRightSepFg = "#90be6d",
+	fileInfoRightSepBg = "#f9c74f",
 	positionFg = "#363a4f",
-	positionBg = "#43aa8b",
+	positionBg = "#f9c74f",
 	positionRightSepBg = "#363a4f",
-	positionRightSepFg = "#43aa8b",
+	positionRightSepFg = "#f9c74f",
 	gitBranchFg = "#363a4f",
 	gitBranchBg = "#4d908e",
 	gitBranchLeftSepBg = "#90be6d",
@@ -154,17 +154,18 @@ local c = {
 		provider = {
 			name = "file_info",
 			opts = {
-				--type = "relative-short"
-				type = "base-only"
-			},
+				file_icon = true
+			}
 		},
 		hl = {
 			fg = "fileInfoFg",
-			bg = "fileInfoBg"
+			bg = "fileInfoBg",
+			style = "bold"
 		},
 		icon = {
 			hl = {
-				fg = "#363a4f"
+				fg = "#ece4db",
+				bg = "#2ec4b6"
 			}
 		},
 		left_sep = "block",
@@ -236,8 +237,8 @@ local c = {
 			},
 		},
 		hl = {
-			fg = "red",
-			bg = "darkblue",
+			fg = "fileInfoFg",
+			bg = "fileInfoBg",
 			style = "bold",
 		},
 		left_sep = "block",
@@ -319,6 +320,7 @@ local c = {
 
 local left = {
 	c.vim_mode,
+	c.file_type,
 	c.fileInfo,
 	c.position
 }
