@@ -47,3 +47,7 @@ end
 function newLine()
 	return vim.api.nvim_replace_termcodes('<End><CR>', true, false, true);
 end
+
+function wrap(char)
+	
+end

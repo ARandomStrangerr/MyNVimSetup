@@ -4,7 +4,10 @@ local supportFunctions = require("./SupportFunctions");
 
 -- color scheme
 vim.opt.termguicolors = true;
-vim.cmd.colorscheme "catppuccin-frappe";
+--vim.cmd.colorscheme "catppuccin-latte"; -- light
+--vim.cmd.colorscheme "catppuccin-frappe"; -- dark
+--vim.cmd.colorscheme "catppuccin-machiato"; -- darker
+vim.cmd.colorscheme "catppuccin-mocha"; -- darkest
 
 -- configurations
 vim.wo.number = true;

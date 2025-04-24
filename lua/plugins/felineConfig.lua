@@ -3,6 +3,10 @@ if not line_ok then
 	return
 end
 
+local catppuccin_latte = {
+	bg = '#fffffc'
+}
+
 local catppuccin_frappe = {
 	bg = "#363a4f",
 	diagnosticWarningsFg = "#f9c74f",
@@ -57,7 +61,7 @@ local c = {
 			opts = {
 				show_mode_name = true,
 				-- padding = "center", -- Uncomment for extra padding.
-			},
+			}
 		},
 		hl = function()
 			return {
@@ -350,9 +354,22 @@ local components = {
 	},
 }
 
+function getColorScheme(themeName)
+	if vim.g.colors_name == "catppuccin-latte" then
+		return catppuccin_latte;
+	elseif vim.g.colors_name == "catppuccin-frappe" then
+		return catppuccin_frappe;
+	elseif vim.g.colors_name == "catppuccin-machiato" then
+		return catppuccin_frappe;
+	elseif vim.g.colors_name == "catppuccin-mocha" then
+		return catppuccin_frappe;
+	end
+end
+
+
 feline.setup({
 	components = components,
-	theme = catppuccin_frappe,
+	theme = getColorScheme(vim.g.colors_name),
 	vi_mode_colors = vi_mode_colors,
 	disable = {
 		filetypes = {"NvimTree"}

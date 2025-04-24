@@ -1,4 +1,10 @@
 {
+	"java.configuration.runtimes": [{
+     	"name": "JavaSE-21",
+      "path": "./lib/21.0.6/Contents/Home",
+      "default": true
+  }],
+	"java.jdt.ls.java.home": "./lib/21.0.6/Contents/Home",
   "languageserver": {
   	"clangd": {
     	"command": "clangd",
@@ -9,11 +15,10 @@
 				"--compile-commands-dir=${workspaceFolder}"
 			]
   	},
-		"pyright": { 
+		"pyright": {
 			"pythonPath": "python",
 			"venvPath": "./venv",
 			"analysis.autoSearchPaths": true
 		}
 	}
 }
-

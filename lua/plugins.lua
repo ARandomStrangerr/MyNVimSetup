@@ -50,7 +50,11 @@ return packer.startup(function(use)
 	use ({
 		"nvim-tree/nvim-tree.lua",
 		config = function()
-			require("nvim-tree").setup()
+			require("nvim-tree").setup({
+				git = {
+					ignore = false
+				}
+			})
 		end,
 	}) -- install nvim tree
 	use({
