@@ -4,10 +4,10 @@ local supportFunctions = require("./SupportFunctions");
 
 -- color scheme
 vim.opt.termguicolors = true;
---vim.cmd.colorscheme "catppuccin-latte"; -- light
+vim.cmd.colorscheme "catppuccin-latte"; -- light
 --vim.cmd.colorscheme "catppuccin-frappe"; -- dark
 --vim.cmd.colorscheme "catppuccin-machiato"; -- darker
-vim.cmd.colorscheme "catppuccin-mocha"; -- darkest
+--vim.cmd.colorscheme "catppuccin-mocha"; -- darkest
 
 -- configurations
 vim.wo.number = true;
@@ -33,3 +33,10 @@ vim.api.nvim_set_keymap('i', "'", "v:lua.isNextChar(\"\'\") ? '<Right>' : \"''<l
 vim.api.nvim_set_keymap('i', ')', "v:lua.isNextChar(')') ? '<Right>' : ')'", {expr=true, noremap=true, silent=true}); -- move out when close brace
 vim.api.nvim_set_keymap('i', ']', "v:lua.isNextChar(']') ? '<Right>' : ']'", {expr=true, noremap=true, silent=true}); -- move out when close square brace
 vim.api.nvim_set_keymap('i', '}', "v:lua.isNextChar('}') ? '<Right>' : '}'", {expr=true, noremap=true, silent=true}); -- move out when close curly brace
+vim.api.nvim_set_keymap('v', '"', [[<Esc>:lua wrap('"')<CR>]], {noremap=true, silent=true});
+vim.api.nvim_set_keymap('v', "'", [[<Esc>:lua wrap("'")<CR>]], {noremap=true, silent=true});
+vim.api.nvim_set_keymap('v', '{', [[<Esc>:lua wrap('{')<CR>]], {noremap=true, silent=true});
+vim.api.nvim_set_keymap('v', '[', [[<Esc>:lua wrap('[')<CR>]], {noremap=true, silent=true});
+vim.api.nvim_set_keymap('v', '(', [[<Esc>:lua wrap('(')<CR>]], {noremap=true, silent=true});
+vim.api.nvim_set_keymap('v', '<', [[<Esc>:lua wrap('<')<CR>]], {noremap=true, silent=true});
+vim.api.nvim_set_keymap('v', '<Tab>', [[<Esc>:lua tab()<CR>]], {noremap=true, silent=true})

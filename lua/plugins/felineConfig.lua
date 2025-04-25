@@ -4,7 +4,39 @@ if not line_ok then
 end
 
 local catppuccin_latte = {
-	bg = '#fffffc'
+	bg = '#fffffc',
+	diagnosticWarningsFg = "#f9c74f",
+	diagnosticWarningsBg = "",
+	diagnosticErrorsFg = "#f94144",
+	vimModeBg = "#43aa8b",
+	vimModeRightSepFg = "#43aa8b",
+	vimModeRightSepBg = "#90be6d",
+	fileInfoFg = "#363a4f",
+	fileInfoBg = "#90be6d",
+	fileInfoRightSepFg = "#90be6d",
+	fileInfoRightSepBg = "#f9c74f",
+	positionFg = "#363a4f",
+	positionBg = "#f9c74f",
+	positionRightSepBg = "#fffffc",
+	positionRightSepFg = "#f9c74f",
+	gitBranchFg = "#363a4f",
+	gitBranchBg = "#4d908e",
+	gitBranchLeftSepBg = "#90be6d",
+	gitBranchLeftSepFg = "#4d908e",
+	gitDiffAddedFg = "#363a4f",
+	gitDiffAddedBg = "#90be6d",
+	gitDiffAddedLeftSepFg = "#90be6d",
+	gitDiffAddedLeftSepBg = "#f9c74f",
+	gitDiffChangedFg = "#363a4f",
+	gitDiffChangedBg = "#f9c74f",
+	gitDiffChangedLeftSepBg = "#f9844a",
+	gitDiffChangedLeftSepFg = "#f9c74f",
+	gitDiffRemovedFg = "#363a4f",
+	gitDiffRemovedBg = "#f9844a",
+	gitDiffRemovedLeftSepBg = "#fffffc",
+	gitDiffRemovedLeftSepFg = "#f9844a",
+	diagnosticErrorFg = "#f3722c",
+	diagnosticWarningFg = "#f9c74f"
 }
 
 local catppuccin_frappe = {
